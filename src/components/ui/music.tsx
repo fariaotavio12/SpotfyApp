@@ -49,7 +49,7 @@ const Music = ({
       <div className="flex-1 flex items-center">
         <p className="mr-4">{item.track_number}</p>
         <div className="flex flex-col g-4">
-          <p className="text-2xl max-sm:text-lg">{item.name}</p>
+          <p className="text-2xl max-sm:text-base text-ellipsis overflow-hidden truncate">{item.name}</p>
           <p className="text-gray-400 text-lg max-sm:text-base">{item.artists[0].name}</p>
         </div>
       </div>

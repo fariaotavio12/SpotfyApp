@@ -67,8 +67,8 @@ const Album = ({}) => {
   return (
     <>
     <Toaster />
-      <main className="w-full h-[calc(100vh-30px)] flex flex-col p-4 relative">
-        <div className="w-full h-full flex flex-col items-center  pb-32 ">
+      <main className="w-full h-[100vh] flex flex-col p-4 relative">
+        <div className="w-full h-full flex flex-col items-center pb-32 overflow-auto">
           <div className="w-full flex g-4">
             <div className="flex-1 bg-dark text-light p-4 font-medium text-xl max-sm:text-base">
               # Titulo
@@ -80,7 +80,7 @@ const Album = ({}) => {
               Duração
             </div>
           </div>
-          <div className="w-full grid grid-cols-1 gap-4 overflow-hidden">
+          <div className="w-full grid grid-cols-1 gap-4 ">
             {traks?.map((item, index) => (
               <>
                 <Music
