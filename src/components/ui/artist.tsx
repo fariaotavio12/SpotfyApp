@@ -14,8 +14,8 @@ const ArtistComponent = ({ item }: { item: Artist }) => {
       />
 
       <div className="w-full flex flex-col gap-4">
-        <h1 className="text-lg">{item.name}</h1>
-        <h5 className="text-base text-gray-500">
+        <h1 className="text-lg max-sm:text-base">{item.name}</h1>
+        <h5 className="text-base text-gray-500 max-sm:text-sm">
           {item.genres || " No Generes"}
         </h5>
       </div>

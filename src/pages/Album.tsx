@@ -70,13 +70,13 @@ const Album = ({}) => {
       <main className="w-full h-[calc(100vh-30px)] flex flex-col p-4 relative">
         <div className="w-full h-full flex flex-col items-center  pb-32 ">
           <div className="w-full flex g-4">
-            <div className="flex-1 bg-dark text-light p-4 font-medium text-xl">
+            <div className="flex-1 bg-dark text-light p-4 font-medium text-xl max-sm:text-base">
               # Titulo
             </div>
-            <div className="flex-1 bg-dark text-light p-4 font-medium text-xl">
+            <div className="flex-1 bg-dark text-light p-4 font-medium text-xl max-sm:text-base">
               Reproduções
             </div>
-            <div className="flex-0  bg-dark text-light p-4 font-medium text-xl">
+            <div className="flex-0  bg-dark text-light p-4 font-medium text-xl max-sm:text-base">
               Duração
             </div>
           </div>

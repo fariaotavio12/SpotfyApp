@@ -47,10 +47,10 @@ function App() {
       </header>
       <main className='w-full h-auto flex items-center justify-center p-4 '>
         <div className=' w-full max-w-screen-2xl grid gap-4 overflow-hidden'>
-          <h1 className='text-2xl font-medium'>Artistas</h1>
+          <h1 className='text-2xl font-medium max-sm:text-lg'>Artistas</h1>
           {artistas?.items.length == 0 && <div className='w-full h-full min-h-[60vh] flex flex-col items-center justify-center gap-4'>
             <img src={imageNotFound} alt="Image not found" />
-            <h1 className='text-2xl capitalize'>não identificamos nenhum artista</h1>
+            <h1 className='text-2xl capitalize max-sm:text-lg'>não identificamos nenhum artista</h1>
           </div>}
           <div className='w-full h-auto flex flex-row flex-wrap gap-6'>
             {artistas?.items.map((item, index) => (
