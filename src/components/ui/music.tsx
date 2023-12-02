@@ -1,6 +1,5 @@
 import { SpotifyTrack } from "@/lib/type/album";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef } from "react";
 
 function formatDuration(milliseconds: number) {
   if (!milliseconds || +milliseconds < 0 || isNaN(milliseconds) || milliseconds == undefined) {
@@ -31,7 +30,6 @@ const Music = ({
   item,
   isActive,
   onClickChange,
-  pause,
 }: {
   item: SpotifyTrack;
   isActive: boolean;

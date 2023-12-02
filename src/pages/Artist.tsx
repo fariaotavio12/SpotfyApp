@@ -1,4 +1,4 @@
-import { api } from "@/lib/axios";
+import api from "@/lib/axios";
 import { Link, useParams } from "react-router-dom";
 import { Artist as IpropsArtist } from "@/lib/type/artist";
 import { useEffect, useState } from "react";
@@ -9,7 +9,7 @@ import iconeArrow from "@/assets/icons/arrow.svg";
 
 async function getArtist(params: string) {
   try {
-    const response = await api.get(`artists/${params}`);
+    const response = await (await api)(`artists/${params}`);
     const artists = response.data;
 
     console.log(artists);
@@ -23,7 +23,7 @@ async function getArtist(params: string) {
 
 async function getAlbuns(params: string) {
   try {
-    const response = await api.get(`artists/${params}/albums`);
+    const response = await (await api)(`artists/${params}/albums`);
     const artists = response.data.items;
 
     console.log(artists);
@@ -35,7 +35,6 @@ async function getAlbuns(params: string) {
   }
 }
 
-interface Props {}
 
 const Artist = ({}) => {
   const { id } = useParams();

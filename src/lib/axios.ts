@@ -1,23 +1,22 @@
-import axios, { AxiosInstance } from "axios";
+import axios from "axios";
 import getToken from "./getToken";
 
 export async function getAPIClient() {
- 
-    const token = await getToken();
+  const token = await getToken();
 
-    const api = axios.create({
-      baseURL: "https://api.spotify.com/v1/",
-    });
+  const api = axios.create({
+    baseURL: "https://api.spotify.com/v1/",
+  });
 
-    console.log(token);
-    
+  console.log(token);
 
-    if (token) {
-      api.defaults.headers["Authorization"] = `Bearer ${token}`;
-    }
+  if (token) {
+    api.defaults.headers["Authorization"] = `Bearer ${token}`;
+  }
 
-    return api;
-  
+  return api;
 }
 
-export const api = await getAPIClient();
+const api = getAPIClient();
+
+export default api;

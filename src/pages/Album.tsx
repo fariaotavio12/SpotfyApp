@@ -2,15 +2,14 @@ import FooterMusic from "@/components/ui/footerMusic";
 import Music from "@/components/ui/music";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
-import { api } from "@/lib/axios";
+import  api from "@/lib/axios";
 import { SpotifyTrack } from "@/lib/type/album";
-import { Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 
 async function getTraks(params: string) {
   try {
-    const response = await api.get(`albums/${params}/tracks`);
+    const response = await (await api)(`albums/${params}/tracks`);
     const artists = response.data;
 
     console.log(artists);

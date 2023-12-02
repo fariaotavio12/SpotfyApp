@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/module/Navbar'
-import { api } from '@/lib/axios'
+import api from '@/lib/axios'
 import { SpotifySearchResponse } from '@/lib/type/artist'
 import { useSearchParams } from 'react-router-dom'
 import ArtistComponent from '@/components/ui/artist'
 import imageNotFound from "@/assets/image/noData.png"
 async function getArtist(params: string) {
   try {
-    const response = await api.get(`search?q=${params}&type=artist&market=BR`);
+    const response = await (await api).get(`search?q=${params}&type=artist&market=BR`);
     const artists = response.data.artists;
     console.log(artists);
     return artists;
@@ -19,7 +19,7 @@ async function getArtist(params: string) {
 
 
 function App() {
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   const [artistas, setArtistas] = useState<SpotifySearchResponse | undefined>(undefined);
 
   const fetchData = async (variavel: string) => {

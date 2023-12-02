@@ -1,7 +1,6 @@
 import { SpotifyAlbum } from "@/lib/type/album";
 import { Link } from "react-router-dom";
 
-interface Props {}
 
 function formatarData(data: string): string {
   // Verifica se a string de entrada está no formato esperado
