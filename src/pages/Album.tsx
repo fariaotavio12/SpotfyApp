@@ -67,7 +67,6 @@ const Album = ({}) => {
   return (
     <>
     <Toaster />
-   
       <main className="w-full h-[calc(100vh-30px)] flex flex-col p-4 relative">
         <div className="w-full h-full flex flex-col items-center  pb-32 ">
           <div className="w-full flex g-4">

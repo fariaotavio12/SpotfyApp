@@ -6,7 +6,7 @@ function formatarData(data: string): string {
   // Verifica se a string de entrada está no formato esperado
   const regex = /^\d{4}-\d{2}-\d{2}$/;
   if (!regex.test(data)) {
-    throw new Error("Formato de data inválido. Use AAAA-MM-DD.");
+    return "No Date";
   }
 
   // Extrai o ano, mês e dia da string
