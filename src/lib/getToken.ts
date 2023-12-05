@@ -5,8 +5,8 @@ export default async function getToken(): Promise<string | undefined> {
 
     const data = {
         grant_type: 'client_credentials',
-        client_id: "cfaf41817ec9419badee6c303f5fa64e",
-        client_secret: "1946eec6bce647e684b95b0699f9e54c"
+        client_id: "ccb7c561b1ce4df09adc4c3f78b407f3",
+        client_secret: "231c498939364d9bb6b749a86e11d29b"
     };
 
     let qsData: string[] = [];

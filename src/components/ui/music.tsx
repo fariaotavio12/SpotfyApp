@@ -41,7 +41,7 @@ const Music = ({
   return (
     <div
       className={cn(
-        "w-full h-auto bg-gray-800 text-light p-4 font-medium text-xl flex rounded cursor-pointer",
+        "w-full h-auto bg-gray-800 text-light p-4 font-medium text-xl flex rounded cursor-pointer overflow-hidden",
         isActive ? "bg-gray-900" : ""
       )}
       onClick={() => onClickChange(item.track_number)}

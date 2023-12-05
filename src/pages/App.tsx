@@ -29,6 +29,9 @@ function App() {
 
   useEffect(() => {
     let params = searchParams.get('search') ?? ''
+    if (params == '') {
+      return
+    }
     fetchData(params);
   }, []);
 

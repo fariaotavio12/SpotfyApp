@@ -51,16 +51,19 @@ const Album = ({}) => {
         if (pause) {
           //@ts-ignore
           audioRef.current.pause();
+          
         } else {
           //@ts-ignore
           audioRef.current.play();
+          
         }
       }
     } else {
-      toast({
-        variant: "destructive",
-        title: `Não foi possivel reproduzir`,
-      });
+      setPause(true);
+      // toast({
+      //   variant: "destructive",
+      //   title: `Não foi possivel reproduzir`,
+      // });
     }
   }, [pause, isActive]);
 
@@ -89,6 +92,8 @@ const Album = ({}) => {
                   isActive={isActive == item.track_number ? true : false}
                   onClickChange={(e: number) => {
                     setIsActive(e);
+                    
+                    
                     setPause(false);
                   }}
                   pause={pause}
@@ -97,8 +102,14 @@ const Album = ({}) => {
             ))}
           </div>
         </div>
+
+        {
+        //@ts-ignore
+        traks && traks[isActive -1] && traks[isActive - 1]?.preview_url ?  (
+             <FooterMusic onClick={() => setPause(!pause)} pause={pause} />
+        ) : ""}
        
-        <FooterMusic onClick={() => setPause(!pause)} pause={pause} />
+       
         {/* {isActive != undefined && traks[isActive ?? 0].preview_url} */}
         {/* {isActive?.toString()} */}
 
